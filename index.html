@@ -1,98 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pizzeria Marinara Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzeria Marinara Premium</title>
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:linear-gradient(135deg,#7b2ff7,#f107a3,#ff7b00);color:#fff}
-nav{padding:15px;background:rgba(0,0,0,.2);position:sticky;top:0}
-nav a{color:#fff;text-decoration:none;margin:0 10px}
-.hero{text-align:center;padding:80px 20px}
-.categories,.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px;max-width:1200px;margin:auto}
-.card{background:#fff;color:#111;border-radius:16px;overflow:hidden;cursor:pointer}
-.card img{width:100%;height:180px;object-fit:cover}
-.card div{padding:15px}
-#items{max-width:1200px;margin:auto;padding:20px}
-.item{background:#fff;color:#111;margin:10px 0;padding:15px;border-radius:12px;display:flex;justify-content:space-between;align-items:center}
-button{padding:10px 15px;border:none;border-radius:8px;background:#d62828;color:white;cursor:pointer}
-.cart{position:fixed;right:10px;bottom:10px;background:#111;padding:15px;border-radius:10px}
+body{margin:0;font-family:Arial,sans-serif;background:#98004f;color:#fff}
+header{background:linear-gradient(135deg,#98004f,#d60074);padding:50px 20px;text-align:center}
+h1{font-size:56px;margin:0;color:#ffd400}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;padding:30px}
+.card{background:#b10060;border-radius:18px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.3)}
+.card img{width:100%;height:230px;object-fit:cover}
+.card h2,.card p,.card div{padding:0 15px}
+.price{color:#ffd400;font-size:28px;font-weight:bold;padding-bottom:20px}
+.offer{margin:30px;background:#7a0040;padding:20px;border-radius:18px}
+.offergrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.offerbox{background:#c50069;padding:15px;border-radius:12px;text-align:center}
+footer{text-align:center;padding:30px;background:#620033}
 </style>
 </head>
 <body>
 
-<nav>
-<a href="#">Hem</a>
-<a href="#kategorier">Kategorier</a>
-</nav>
+<header>
+<h1>🍕 Pizzeria Marinara</h1>
+<h3>Lunch 90 kr • Dricka ingår • Sallad till pizza</h3>
+</header>
 
-<div class="hero">
-<h1>Pizzeria Marinara</h1>
-<p>Demo för restauranghemsida</p>
+<section class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591">
+<h2>Pizza</h2>
+<p>Nygräddad pizza med färska råvaror.</p>
+<div class="price">90 kr</div>
 </div>
 
-<section id="kategorier" class="categories">
-<div class="card" onclick="showCategory('pizza')">
-<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200">
-<div><h3>Pizzor</h3><p>Alla pizzakategorier</p></div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212">
+<h2>Kebabpizza</h2>
+<p>Kebabkött, sås och grönsaker på nybakad pizza.</p>
+<div class="price">110 kr</div>
 </div>
 
-<div class="card" onclick="showCategory('kebab')">
-<img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=1200">
-<div><h3>Kebab</h3><p>Kebabrätter</p></div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783">
+<h2>Kebabtallrik</h2>
+<p>Kebabkött med pommes, sallad och sås.</p>
+<div class="price">95 kr</div>
 </div>
 
-<div class="card" onclick="showCategory('sallad')">
-<img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=1200">
-<div><h3>Sallader</h3><p>Fräscha sallader</p></div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1642948904447-80d3f4b4d4f6">
+<h2>Kebabrulle</h2>
+<p>Stor kebabrulle med sallad och valfri sås.</p>
+<div class="price">70 kr</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+<h2>Kebab med bröd</h2>
+<p>Kebabkött, sallad och sås i nybakat bröd.</p>
+<div class="price">90 kr</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1547592180-85f173990554">
+<h2>Falafelrulle</h2>
+<p>Vegetariskt alternativ med falafel och sallad.</p>
+<div class="price">90 kr</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+<h2>Hamburgare</h2>
+<p>Saftig burgare med pommes.</p>
+<div class="price">110 kr</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+<h2>Gyrostallrik</h2>
+<p>Gyroskött med pommes och sallad.</p>
+<div class="price">95 kr</div>
+</div>
+
+</section>
+
+<section class="offer">
+<h2>🔥 Erbjudanden</h2>
+<div class="offergrid">
+<div class="offerbox">Alla ordinarie pizzor<br><b>90 kr</b></div>
+<div class="offerbox">Kebabpizza<br><b>110 kr</b></div>
+<div class="offerbox">Kebabrulle 2 st<br><b>120 kr</b></div>
+<div class="offerbox">Kebabtallrik 2 st<br><b>145 kr</b></div>
+<div class="offerbox">Super Kebabpizza<br><b>110 kr</b></div>
+<div class="offerbox">Gyrospizza<br><b>110 kr</b></div>
+<div class="offerbox">Gyrosrulle<br><b>90 kr</b></div>
+<div class="offerbox">Gyros med bröd<br><b>100 kr</b></div>
 </div>
 </section>
 
-<div id="items"></div>
-
-<div class="cart">
-Kundvagn: <span id="count">0</span>
-</div>
-
-<script>
-let cart=0;
-
-const menu={
-pizza:[
-{name:'Vesuvio',price:'113 kr'},
-{name:'Capricciosa',price:'120 kr'},
-{name:'Kebabpizza',price:'135 kr'}
-],
-kebab:[
-{name:'Kebabtallrik',price:'120 kr'},
-{name:'Falafelrulle',price:'110 kr'}
-],
-sallad:[
-{name:'Kycklingsallad',price:'110 kr'}
-]
-};
-
-function showCategory(cat){
- const div=document.getElementById('items');
- div.innerHTML='<h2 style="padding:20px">Kategori</h2>';
- menu[cat].forEach(item=>{
-  div.innerHTML += `
-  <div class="item">
-   <div>
-    <strong>${item.name}</strong><br>
-    ${item.price}
-   </div>
-   <button onclick="orderItem('${item.name}')">Beställ</button>
-  </div>`;
- });
-}
-
-function orderItem(name){
- cart++;
- document.getElementById('count').innerText=cart;
- alert('Demo-beställning: '+name+' har lagts i kundvagnen.');
-}
-</script>
+<footer>
+<h2>📞 011-31 27 64</h2>
+<p>Norrköpingsvägen 129, Norrköping</p>
+</footer>
 
 </body>
 </html>
